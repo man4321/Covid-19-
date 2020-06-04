@@ -60,10 +60,14 @@
         
 		<input type="text" class="form-control mt-4" placeholder="Enter country here" name=""
 		ng-model="c" ng-change="get_c_data()"/>
-
-		<time datetime="{{c_data.lastUpdate}}"></time>
+		<!-- <select class="selectpicker countrypicker" data-live-search="true" >select country</select> -->
+		
+		
 		<div class="container-fluid" ng-if="c">
 			<h1 class="text-center mt-4 text-uppercase">{{c}} status</h1>
+		<div class="text-center"><strong>LastUpdate: </strong>{{c_data.lastUpdate | date: "medium"}}
+		</div>
+		<br>
 		<div class="row text-center">
 			<div class="col-md-4">
 				<div class="card bg-warning text-white">
